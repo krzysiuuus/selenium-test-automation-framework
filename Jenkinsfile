@@ -23,13 +23,13 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/krzysiuuus/python-test-automation-framework.git'
+                    url: 'https://github.com/krzysiuuus/selenium-test-automation-framework.git'
             }
         }
 
         stage('Build Docker image') {
             steps {
-                sh 'docker build -t python-test-framework .'
+                sh 'docker build -t selenium-test-framework .'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline {
                     docker run --rm \
                         --volumes-from jenkins \
                         -w ${WORKSPACE} \
-                        python-test-framework \
+                        selenium-test-framework \
                         pytest api_tests/tests \
                         -v \
                         --alluredir=reports/api/allure
@@ -62,7 +62,7 @@ pipeline {
                         -e CI=true \
                         -e REMOTE_URL=http://host.docker.internal:4444/wd/hub \
                         -w ${WORKSPACE} \
-                        python-test-framework \
+                        selenium-test-framework \
                         pytest page_object_pattern/tests \
                         -v \
                         --browser=${BROWSER} \

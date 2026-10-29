@@ -1,7 +1,7 @@
 services:
   python-tests:
     build: .
-    container_name: python-test-automation-framework
+    container_name: selenium-test-automation-framework
 
     volumes:
       - ./reports:/app/reports

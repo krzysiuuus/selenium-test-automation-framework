@@ -1,6 +1,6 @@
 # Python Test Automation Framework
 
-![Python Tests](https://github.com/krzysiuuus/python-test-automation-framework/actions/workflows/python-tests.yml/badge.svg)
+![Python Tests](https://github.com/krzysiuuus/selenium-test-automation-framework/actions/workflows/python-tests.yml/badge.svg)
 
 Automated test framework created with Python, Selenium WebDriver, Requests and Pytest.
 
@@ -104,7 +104,7 @@ REST API
 ## Project Structure
 
 ```text
-python-test-automation-framework/
+selenium-test-automation-framework/
 ├── .github/
 │ └── workflows/
 │ └── python-tests.yml
@@ -154,8 +154,8 @@ python-test-automation-framework/
 Clone the repository:
 
 ```bash
-git clone https://github.com/krzysiuuus/python-test-automation-framework.git
-cd python-test-automation-framework
+git clone https://github.com/krzysiuuus/selenium-test-automation-framework.git
+cd selenium-test-automation-framework
 ```
 Create virtual environment:
 
@@ -395,7 +395,7 @@ It contains:
 
 Build image:
 ```bash
-docker build -t python-test-framework .
+docker build -t selenium-test-framework .
 ```
 
 ### Run API tests with Docker Compose
