@@ -8,3 +8,5 @@ reports/
 .pytest_cache/
 reports/
 misc
+temp.py
+veema.py
